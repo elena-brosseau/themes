@@ -12,12 +12,20 @@
             <a href="#">
                 <h1><span class="lobster">ItalElectri</span>Cars</h1>
             </a>
-            <nav>
+            <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'top-menu',
+                        'menu_class' => 'top-menu'
+                    )
+                );
+            ?>
+            <!-- <nav>
                 <a href="#story">ABOUT</a>
                 <a href="#contact">CONTACT</a>
                 <a href="./pages/order.html" id="header-btn">ORDER NOW</a>
-            </nav>
-            <img src="./assets/menu.png" alt="menu">
+            </nav> -->
+            <img src="<?php echo get_template_directory_uri();?>/assets/menu.png" alt="menu">
         </div>
     </header>
   
