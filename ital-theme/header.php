@@ -17,7 +17,7 @@
                 <a href="#contact">CONTACT</a>
                 <a href="./pages/order.html" id="header-btn">ORDER NOW</a>
             </nav>
-            <img src="./assets/menu.png" alt="menu">
+            <img src="<?php echo get_template_directory_uri();?>/assets/menu.png" alt="menu">
         </div>
     </header>
   
