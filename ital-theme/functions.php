@@ -1,4 +1,7 @@
+
 <?php
+
+// Load CSS and JS
 
 function load_css() {
     
@@ -11,11 +14,14 @@ add_action('wp_enqueue_scripts', 'load_css');
 function load_js() {
 
     wp_enqueue_script('jquery');
-    wp_register_script('scripts', get_template_directory_uri() . '/scripts/scripts.js', 'jquery', false, true);
+    wp_register_script('scripts', get_template_directory_uri() . '/scripts/scripts.js', 'jquery', time(), true);
     wp_enqueue_script('scripts');
 }
 
 add_action('wp_enqueue_scripts', 'load_js');
+
+
+//Add Google Fonts
 
 function add_google_fonts() {    
     
@@ -26,9 +32,11 @@ add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
 
 //Theme Options
+
 add_theme_support('menus');
 
 //Menus
+
 register_nav_menus(
 
     array(
@@ -36,6 +44,14 @@ register_nav_menus(
         'bottom-menu' => 'Footer Menu'
     )
 );
+
+//WooCommerce Support
+
+function mytheme_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 ?>
 

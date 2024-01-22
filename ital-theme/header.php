@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="header-content">
-            <a href="#">
+            <a href="/italelectric/">
                 <h1><span class="lobster">ItalElectri</span>Cars</h1>
             </a>
             <?php
@@ -20,12 +20,12 @@
                     )
                 );
             ?>
-            <!-- <nav>
-                <a href="#story">ABOUT</a>
-                <a href="#contact">CONTACT</a>
-                <a href="./pages/order.html" id="header-btn">ORDER NOW</a>
-            </nav> -->
-            <img src="<?php echo get_template_directory_uri();?>/assets/menu.png" alt="menu">
+            <div class="menu-btn">
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+            </div>
+            <!-- <img src="<?php echo get_template_directory_uri();?>/assets/menu.png" alt="menu"> -->
         </div>
     </header>
   
